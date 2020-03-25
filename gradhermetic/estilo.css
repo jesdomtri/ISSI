@@ -1,0 +1,559 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body, html {
+    height: 100%;
+    font-family: "Courgette", cursive;
+}
+a {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #666666;
+    margin: 0px;
+    transition: all 0.4s;
+}
+a:focus {
+    outline: none !important;
+}
+a:hover {
+    text-decoration: none;
+    color: #57b846;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Lobster", cursive;
+    color: white;
+}
+ul, li {
+    margin: 0px;
+    list-style-type: none;
+}
+input {
+    outline: none;
+    border: none;
+}
+textarea {
+    outline: none;
+    border: none;
+}
+textarea:focus, input:focus {
+    border-color: transparent !important;
+}
+button {
+    outline: none !important;
+    border: none;
+    background: transparent;
+}
+button:hover {
+    cursor: pointer;
+}
+iframe {
+    border: none !important;
+}
+.text-center {
+    text-align: center;
+}
+.text-left {
+    text-align: left;
+}
+.text-right {
+    text-align: right;
+}
+.text-middle {
+    vertical-align: middle;
+}
+.flex {
+    display: flex;
+    flex-wrap: flex;
+}
+.flex-columna {
+    flex-direction: column;
+    display: flex;
+}
+.sombra-texto {
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.padding-bottom47 {
+    padding-bottom: 47px
+}
+.padding-right25 {
+    padding-right: 25px
+}
+.padding-bottom20 {
+    padding-bottom: 20px
+}
+.color-blanco {
+    color: white;
+}
+/* HOME */
+
+#home .display-container:hover .display-hover {
+    display: block
+}
+#home .display-container:hover span.display-hover {
+    display: inline-block
+}
+#home .animate-opacity {
+    animation: opac 0.8s
+}
+@keyframes opac {
+    from {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
+#home .texto-blanco, .hover-texto-blanco:hover {
+    color: white!important
+}
+#home .display-middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#home .fuente64 {
+    font-size: 64px!important
+}
+#home .animate-top {
+    position: relative;
+    animation: animatetop 0.4s
+}
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+#home .linea-blanca, .hover-linea-blanca:hover {
+    border-color: white!important
+}
+#home .fuente18 {
+    font-size: 18px!important
+}
+#home .center {
+    text-align: center!important
+}
+#home .fondo {
+    background-image: url('/gradhermetic/img/home.png');
+    min-height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+#home .alinear-linear {
+    margin: auto;
+    width: 40%
+}
+/* LOGIN */
+
+#login form {
+    width: 290px;
+}
+#login .titulo {
+    font-family: "Lobster", cursive;
+    font-size: 24px;
+    color: #333333;
+    line-height: 1.2;
+    text-align: center;
+    width: 100%;
+    display: block;
+    padding-bottom: 54px;
+}
+#login .inputExt {
+    position: relative;
+    width: 100%;
+    margin-bottom: 10px;
+}
+#login .inputInt {
+    font-size: 15px;
+    line-height: 1.5;
+    color: #666666;
+    display: block;
+    width: 100%;
+    background: #e6e6e6;
+    height: 50px;
+    border-radius: 25px;
+    padding: 0 30px 0 68px;
+}
+#login .botonExt {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 20px;
+}
+#login .botonInt {
+    font-size: 15px;
+    line-height: 1.5;
+    color: #fff;
+    text-transform: uppercase;
+    width: 100%;
+    height: 50px;
+    border-radius: 25px;
+    background: #57b846;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 25px;
+    transition: all 0.4s;
+}
+#login .botonInt:hover {
+    background: #333333;
+}
+#login .botonInt:hover {
+    opacity: 0.8;
+}
+#login .container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background: #9053c7;
+    background: linear-gradient(-135deg, #f47142, #720505);
+}
+#login .containerInt {
+    width: 960px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 120px 130px 10px 150px;
+}
+#login .imagen {
+    width: auto;
+    vertical-align: middle;
+    text-align: center;
+}
+#login .imagen img {
+    max-width: 100%;
+}
+#login .limitador {
+    width: 100%;
+    margin: 0 auto;
+}
+#login .txt1 {
+    font-size: 13px;
+    line-height: 1.5;
+    color: #999999;
+}
+#login .txt2 {
+    font-size: 13px;
+    line-height: 1.5;
+    color: #666666;
+}
+/* CONTACTO */
+
+#contacto .limitador {
+    width: 100%;
+    margin: 0 auto;
+}
+#contacto .container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background: #9053c7;
+    background: linear-gradient(-135deg, #f47142, #720505);
+}
+#contacto .containerInt {
+    height: 500px;
+    width: 90%;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-direction: row-reverse;
+}
+#contacto .inputExt {
+    position: relative;
+    width: 100%;
+    margin-bottom: 10px;
+}
+#contacto .inputInt {
+    font-size: 15px;
+    line-height: 1.5;
+    color: #666666;
+    display: block;
+    width: 100%;
+    background: #e6e6e6;
+    height: 50px;
+    border-radius: 25px;
+    padding: 0 30px 0 68px;
+}
+#contacto textarea {
+    width: 100%;
+    height: 100px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    vertical-align: middle;
+    border-radius: 25px;
+}
+#contacto .botonExt {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 20px;
+}
+#contacto .botonInt {
+    font-size: 15px;
+    line-height: 1.5;
+    color: #fff;
+    text-transform: uppercase;
+    width: 30%;
+    height: 50px;
+    border-radius: 25px;
+    background: #57b846;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 25px;
+    transition: all 0.4s;
+}
+#contacto .botonInt:hover {
+    background: #333333;
+}
+#contacto .botonInt:hover {
+    opacity: 0.8;
+}
+#contacto .titulo {
+    font-family: "Lobster", cursive;
+    width: 100%;
+    display: block;
+    font-size: 30px;
+    color: #333333;
+    line-height: 1.2;
+    text-align: center;
+    padding-bottom: 33px;
+}
+#contacto .imagen {
+    width: 100%;
+    vertical-align: middle;
+    text-align: center;
+}
+#contacto .imagen img {
+    max-width: 100%;
+}
+#contacto .izquierda {
+    width: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+    padding: 30px 15px 0px 15px;
+}
+#contacto .izquierda::before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+}
+#contacto .columna {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#contacto form {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 56px 55px 63px 55px;
+}
+#contacto .bg-imagen {
+    background-image: url('/gradhermetic/img/contacto.jpg');
+}
+/* ABOUT */
+
+#about .limitador {
+    width: 100%;
+    margin: 0 auto;
+}
+#about .container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background: white;
+    background: linear-gradient(-135deg, #f47142, #720505);
+}
+#about .containerInt {
+    width: 90%;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-direction: row-reverse;
+}
+#about .imagen {
+    width: 100%;
+    vertical-align: middle;
+    text-align: center;
+}
+#about .imagen img {
+    max-width: 100%;
+}
+#about .izquierda {
+    width: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 30px 15px 0px 15px;
+}
+#about form {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 56px 55px 63px 55px;
+    text-align: middle;
+}
+#about h1 {
+    padding-left: 35%;
+}
+#about .titulo {
+    font-family: "Lobster", cursive;
+    width: 100%;
+    display: block;
+    font-size: 30px;
+    color: #333333;
+    line-height: 1.2;
+    text-align: middle;
+    padding-bottom: 33px;
+}
+#about .fondo {
+    background-image: url('/gradhermetic/img/about.jpg');
+}
+/* BARRA NAV */
+
+#barra .colores {
+    background-color: #4b4f56;
+    color: white;
+}
+#barra .top {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    top: 0
+}
+#barra .bar {
+    width: 100%;
+    overflow: hidden
+}
+#barra .center .bar {
+    display: inline-block;
+    width: auto
+}
+#barra .bar .bar-item {
+    padding: 8px 16px;
+    float: left;
+    width: auto;
+    border: none;
+    display: block;
+    outline: 0
+}
+#barra .bar .dropdown-hover, .bar .dropdown-click {
+    position: static;
+    float: left
+}
+#barra .bar .boton {
+    white-space: normal;
+    transition: all 0.4s;
+}
+#barra .bar .boton:hover {
+    opacity: 0.8;
+}
+#barra .wide {
+    letter-spacing: 4px
+}
+#barra .padding {
+    padding: 8px 16px!important
+}
+#barra .card {
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)
+}
+#barra .bar-block .bar-item {
+    width: 100%;
+    display: block;
+    padding: 8px 16px;
+    text-align: left;
+    border: none;
+    white-space: normal;
+    float: none;
+    outline: 0
+}
+#barra .bar-block.center .bar-item {
+    text-align: center
+}
+#barra .boton:hover {
+    color: #000!important;
+    background-color: #ccc!important;
+    opacity: 0.8;
+}
+#barra .btn, .boton {
+    border: none;
+    display: inline-block;
+    padding: 8px 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    background-color: inherit;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.4s;
+}
+#barra .btn, .boton:hover {
+    opacity: 0.8;
+}
+#barra .right {
+    float: right!important
+}
+#barra .rightbar {
+    border-right: 6px solid #ccc!important
+}
+
+
+
+/*ERROR DE LOGIN*/
+.error{
+    border: 2px solid red;
+    text-align: center;
+    border-radius: 25px;
+    background-color: coral;
+    padding: 10px;
+    margin-bottom: 10px;
+}

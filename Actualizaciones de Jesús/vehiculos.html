@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Vehículos
+        </title>
+        <meta charset="utf-8" lang="es">
+        </meta>
+        <link href="gradhermetic.css" rel="stylesheet" type="text/css">
+            <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans" rel="stylesheet">
+            </link>
+        </link>
+    </head>
+    <body>
+        <div class="limitador" id="dashboard">
+            <div class="container">
+                <div class="containerInt">
+                    <div class="sidebar">
+                        <div class="logo">
+                            <span class="simple-text pos-logo">
+                                Vehículos Asignados
+                            </span>
+                            <div class="sidebar-wrapper">
+                                <ul class="nav">
+                                    <li>
+                                        <a href="dashboard.html">
+                                            <p>
+                                                Dashboard
+                                            </p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="obrasAsignadas.html">
+                                            <p>
+                                                Obras asignadas
+                                            </p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="vehiculosAsignados.html">
+                                            <p>
+                                                Vehículos asignados
+                                            </p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="trabajadores.html">
+                                            <p>
+                                                Trabajadores
+                                            </p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="obras.html">
+                                            <p>
+                                                Obras
+                                            </p>
+                                        </a>
+                                    </li>
+                                    <li class="activo">
+                                        <a href="vehiculos.html">
+                                            <p>
+                                                Vehículos
+                                            </p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <p>
+                                                Salir
+                                            </p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-main">
+                        <div class="panel-header ">
+                        </div>
+                        <div class="content">
+                            <div class="fila">
+                                <div class="cuadrado">
+                                    <div class="cuadrado-header">
+                                        <h5 class="title">
+                                            Vehículos:
+                                        </h5>
+                                    </div>
+                                    <div class="cuadrado-body">
+                                        <div id="vehiculos">
+                                            <div class="btn-group padding-bottom30">
+                                                <button class="botonDash" type="button">
+                                                    Mostrar todos
+                                                </button>
+                                                <button class="botonDash" onclick="document.getElementById('form-modal').style.display='block'" type="button">
+                                                    Añadir vehículo
+                                                </button>
+                                            </div>
+                                            <table>
+                                                <tr>
+                                                    <th>
+                                                    </th>
+                                                    <th>
+                                                        Matrícula
+                                                    </th>
+                                                    <th>
+                                                        Modelo
+                                                    </th>
+                                                    <th>
+                                                        Color
+                                                    </th>
+                                                    <th>
+                                                        Próxima revisión
+                                                    </th>
+                                                    <th>
+                                                        Mostrar trabajadores asignados
+                                                    </th>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        1
+                                                    </td>
+                                                    <td>
+                                                        1234XBV
+                                                    </td>
+                                                    <td>
+                                                        Fiat 500
+                                                    </td>
+                                                    <td>
+                                                        Blanco
+                                                    </td>
+                                                    <td>
+                                                    </td>
+                                                    <td class="txt-align-center">
+                                                        <button class="botonDash" onclick="document.getElementById('form-modal2').style.display='block'" type="button">
+                                                            Mostrar
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        2
+                                                    </td>
+                                                    <td>
+                                                        1234XBV
+                                                    </td>
+                                                    <td>
+                                                        Fiat 500
+                                                    </td>
+                                                    <td>
+                                                        Blanco
+                                                    </td>
+                                                    <td>
+                                                    </td>
+                                                    <td class="txt-align-center">
+                                                        <button class="botonDash" onclick="document.getElementById('form-modal2').style.display='block'" type="button">
+                                                            Mostrar
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <br>
+                                                <div>
+                                                    <a href="dashboard.php?rend=trabajadores.php&PAGE=1">
+                                                        1
+                                                    </a>
+                                                    <a href="dashboard.php?rend=trabajadores.php&PAGE=2">
+                                                        2
+                                                    </a>
+                                                    <a href="dashboard.php?rend=trabajadores.php&PAGE=3">
+                                                        3
+                                                    </a>
+                                                </div>
+                                            </br>
+                                            <div class="btn-group">
+                                                <button class="botonDash" type="button">
+                                                    Mostrar todos
+                                                </button>
+                                                <button class="botonDash" onclick="document.getElementById('form-modal').style.display='block'" type="button">
+                                                    Añadir vehículo
+                                                </button>
+                                            </div>
+                                            <div class="modal" id="form-modal">
+                                                <form class="modal-content animate">
+                                                    <div class="container-modal">
+                                                        <span class="titulo2">
+                                                            Añadir vehículo
+                                                        </span>
+                                                        <div class="inputExt">
+                                                            <input class="inputInt" name="matricula" placeholder="Matrícula" required="" type="text">
+                                                            </input>
+                                                        </div>
+                                                        <div class="inputExt">
+                                                            <input class="inputInt" name="modelo" placeholder="Modelo" required="" type="text">
+                                                            </input>
+                                                        </div>
+                                                        <div class="inputExt">
+                                                            <input class="inputInt" name="color" placeholder="Color" required="" type="text">
+                                                            </input>
+                                                        </div>
+                                                        <div class="botonExt">
+                                                            <button class="botonInt" type="submit">
+                                                                Añadir
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="modal" id="form-modal2">
+                                                <form class="modal-content animate">
+                                                    <div class="container-modal">
+                                                        <span class="titulo2">
+                                                            Información de
+                                                        </span>
+                                                        <div class="flex">
+                                                            <span class="padding-left10 padding-bottom20">
+                                                                Nombre:
+                                                            </span>
+                                                        </div>
+                                                        <div class="flex">
+                                                            <span class="padding-left10 padding-bottom20">
+                                                                DNI:
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+<script>
+    var modal = document.getElementById('form-modal');
+    var modal2 = document.getElementById('form-modal2');
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }else if (event.target == modal2) {
+                    modal2.style.display = "none";
+                }
+            }
+</script>

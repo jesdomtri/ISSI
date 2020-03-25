@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Trabajadores
+        </title>
+        <meta charset="utf-8" lang="es">
+        </meta>
+        <link href="gradhermetic.css" rel="stylesheet" type="text/css">
+            <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans" rel="stylesheet">
+            </link>
+        </link>
+    </head>
+    <body>
+        <!-- Trabajadores -->
+        <div class="limitador" id="dashboard">
+            <div class="container">
+                <div class="containerInt">
+                    <div class="sidebar">
+                        <div class="logo">
+                            <span class="simple-text pos-logo">
+                                Vehículos Asignados
+                            </span>
+                            <div class="sidebar-wrapper">
+                                <ul class="nav">
+                                    <li>
+                                        <a href="dashboard.html">
+                                            <p>
+                                                Dashboard
+                                            </p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="obrasAsignadas.html">
+                                            <p>
+                                                Obras asignadas
+                                            </p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="vehiculosAsignados.html">
+                                            <p>
+                                                Vehículos asignados
+                                            </p>
+                                        </a>
+                                    </li>
+                                    <li class="activo">
+                                        <a href="trabajadores.html">
+                                            <p>
+                                                Trabajadores
+                                            </p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="obras.html">
+                                            <p>
+                                                Obras
+                                            </p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="vehiculos.html">
+                                            <p>
+                                                Vehículos
+                                            </p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <p>
+                                                Salir
+                                            </p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-main">
+                        <div class="panel-header ">
+                        </div>
+                        <div class="content">
+                            <div class="fila">
+                                <div class="cuadrado">
+                                    <div class="cuadrado-header">
+                                        <h5 class="title">
+                                            Trabajadores:
+                                        </h5>
+                                    </div>
+                                    <div class="cuadrado-body">
+                                        <div id="trabajadores">
+                                            <!--Botones de trabajadores-->
+                                            <div class="btn-group padding-bottom30">
+                                                <a class="botonDash" href="dashboard.php?rend=trabajadores/trabajadores.php&acciones_trabajadores=todos">
+                                                    Mostrar todos
+                                                </a>
+                                                <a "="" class="botonDash" href="dashboard.php?rend=trabajadores/trabajadores.php&acciones_trabajadores=contratar" type="button">
+                                                    Contratar trabajador
+                                                </a>
+                                            </div>
+                                            <div class="modal" id="form-modal">
+                                                <form action="dashboard.php?rend=trabajadores.php&acciones_trabajadores=contratar_resp" class="modal-content animate" method="post">
+                                                    <div class="container-modal">
+                                                        <span class="titulo2">
+                                                            Contratar trabajador
+                                                        </span>
+                                                        <div class="inputExt">
+                                                            <input class="inputInt" name=":DNI" placeholder="DNI" required="" type="text" value="">
+                                                            </input>
+                                                        </div>
+                                                        <div class="inputExt">
+                                                            <input class="inputInt" name=":NOMBRE" placeholder="Nombre completo" required="" type="text" value="">
+                                                            </input>
+                                                        </div>
+                                                        <div class="inputExt">
+                                                            <input class="inputInt" name=":FECHA_NAC" placeholder="Fecha de nacimiento" required="" type="date" value="">
+                                                            </input>
+                                                        </div>
+                                                        <div class="inputExt">
+                                                            <input class="inputInt" name=":EMAIL" placeholder="Email" required="" type="text" value="">
+                                                            </input>
+                                                        </div>
+                                                        <div class="inputExt">
+                                                            <input class="inputInt" name=":NSS" placeholder="Número de seguridad social" required="" type="text" value="">
+                                                            </input>
+                                                        </div>
+                                                        <div class="inputExt">
+                                                            <input class="inputInt" name=":PSW" placeholder="Contraseña" required="" type="password" value="">
+                                                            </input>
+                                                        </div>
+                                                        <label>
+                                                            <input name=":ADMIN" type="checkbox" value="T">
+                                                                ¿Permisos de administrador?
+                                                            </input>
+                                                        </label>
+                                                        <div class="botonExt">
+                                                            <button class="botonInt" type="submit">
+                                                                Contratar
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <script>
+                                                var modal = document.getElementById('form-modal');
+                                                window.onclick = function(event) {
+                                                    if (event.target == modal) {
+                                                        modal.style.display = "none";
+                                                    }
+                                                }
+                                            </script>
+                                            <table>
+                                                <tr>
+                                                    <th>
+                                                    </th>
+                                                    <th>
+                                                        DNI
+                                                    </th>
+                                                    <th>
+                                                        Nombre y apellidos
+                                                    </th>
+                                                    <th>
+                                                        Correo electrónico
+                                                    </th>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        1
+                                                    </td>
+                                                    <td>
+                                                        12345678C
+                                                    </td>
+                                                    <td>
+                                                        MANOLO
+                                                    </td>
+                                                    <td>
+                                                        manolo@gradhermetic.es
+                                                    </td>
+                                                    <td class="txt-align-center">
+                                                        <a class="botonDash personal" name="personal" value="12345678C">
+                                                            Datos personales
+                                                        </a>
+                                                    </td>
+                                                    <td class="txt-align-center">
+                                                        <a class="botonDash nominas" name="nominas" value="12345678C">
+                                                            Nóminas
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        2
+                                                    </td>
+                                                    <td>
+                                                        12345679D
+                                                    </td>
+                                                    <td>
+                                                        ANGEL
+                                                    </td>
+                                                    <td>
+                                                        angel@gradhermetic.es
+                                                    </td>
+                                                    <td class="txt-align-center">
+                                                        <a class="botonDash personal" name="personal" value="12345679D">
+                                                            Datos personales
+                                                        </a>
+                                                    </td>
+                                                    <td class="txt-align-center">
+                                                        <a class="botonDash nominas" name="nominas" value="12345679D">
+                                                            Nóminas
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        3
+                                                    </td>
+                                                    <td>
+                                                        12345679X
+                                                    </td>
+                                                    <td>
+                                                        ANGEL
+                                                    </td>
+                                                    <td>
+                                                        amgel@gradhermetic.es
+                                                    </td>
+                                                    <td class="txt-align-center">
+                                                        <a class="botonDash personal" name="personal" value="12345679X">
+                                                            Datos personales
+                                                        </a>
+                                                    </td>
+                                                    <td class="txt-align-center">
+                                                        <a class="botonDash nominas" name="nominas" value="12345679X">
+                                                            Nóminas
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        4
+                                                    </td>
+                                                    <td>
+                                                        12345678A
+                                                    </td>
+                                                    <td>
+                                                        Paco Sanchez
+                                                    </td>
+                                                    <td>
+                                                        pacosan@gmail.com
+                                                    </td>
+                                                    <td class="txt-align-center">
+                                                        <a class="botonDash personal" name="personal" value="12345678A">
+                                                            Datos personales
+                                                        </a>
+                                                    </td>
+                                                    <td class="txt-align-center">
+                                                        <a class="botonDash nominas" name="nominas" value="12345678A">
+                                                            Nóminas
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        5
+                                                    </td>
+                                                    <td>
+                                                        12345678B
+                                                    </td>
+                                                    <td>
+                                                        Jaime Pensi
+                                                    </td>
+                                                    <td>
+                                                        jaimepen@gmail.com
+                                                    </td>
+                                                    <td class="txt-align-center">
+                                                        <a class="botonDash personal" name="personal" value="12345678B">
+                                                            Datos personales
+                                                        </a>
+                                                    </td>
+                                                    <td class="txt-align-center">
+                                                        <a class="botonDash nominas" name="nominas" value="12345678B">
+                                                            Nóminas
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        6
+                                                    </td>
+                                                    <td>
+                                                        12345678T
+                                                    </td>
+                                                    <td>
+                                                        Amaro Garcia
+                                                    </td>
+                                                    <td>
+                                                        amaro@gmail.com
+                                                    </td>
+                                                    <td class="txt-align-center">
+                                                        <a class="botonDash personal" name="personal" value="12345678T">
+                                                            Datos personales
+                                                        </a>
+                                                    </td>
+                                                    <td class="txt-align-center">
+                                                        <a class="botonDash nominas" name="nominas" value="12345678T">
+                                                            Nóminas
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        7
+                                                    </td>
+                                                    <td>
+                                                        12345678P
+                                                    </td>
+                                                    <td>
+                                                        Pep Perez
+                                                    </td>
+                                                    <td>
+                                                        peperex@hotmail.com
+                                                    </td>
+                                                    <td class="txt-align-center">
+                                                        <a class="botonDash personal" name="personal" value="12345678P">
+                                                            Datos personales
+                                                        </a>
+                                                    </td>
+                                                    <td class="txt-align-center">
+                                                        <a class="botonDash nominas" name="nominas" value="12345678P">
+                                                            Nóminas
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        8
+                                                    </td>
+                                                    <td>
+                                                        12345678R
+                                                    </td>
+                                                    <td>
+                                                        Amaro Perez
+                                                    </td>
+                                                    <td>
+                                                        amperez@grad.com
+                                                    </td>
+                                                    <td class="txt-align-center">
+                                                        <a class="botonDash personal" name="personal" value="12345678R">
+                                                            Datos personales
+                                                        </a>
+                                                    </td>
+                                                    <td class="txt-align-center">
+                                                        <a class="botonDash nominas" name="nominas" value="12345678R">
+                                                            Nóminas
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        9
+                                                    </td>
+                                                    <td>
+                                                        12345673C
+                                                    </td>
+                                                    <td>
+                                                        Amaro Garcia
+                                                    </td>
+                                                    <td>
+                                                        amaro@amaro.es
+                                                    </td>
+                                                    <td class="txt-align-center">
+                                                        <a class="botonDash personal" name="personal" value="12345673C">
+                                                            Datos personales
+                                                        </a>
+                                                    </td>
+                                                    <td class="txt-align-center">
+                                                        <a class="botonDash nominas" name="nominas" value="12345673C">
+                                                            Nóminas
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        10
+                                                    </td>
+                                                    <td>
+                                                        12345673B
+                                                    </td>
+                                                    <td>
+                                                        Amaro Garcia
+                                                    </td>
+                                                    <td>
+                                                        amaro@amaro.es
+                                                    </td>
+                                                    <td class="txt-align-center">
+                                                        <a class="botonDash personal" name="personal" value="12345673B">
+                                                            Datos personales
+                                                        </a>
+                                                    </td>
+                                                    <td class="txt-align-center">
+                                                        <a class="botonDash nominas" name="nominas" value="12345673B">
+                                                            Nóminas
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        11
+                                                    </td>
+                                                    <td>
+                                                        12345673G
+                                                    </td>
+                                                    <td>
+                                                        Amaro Garcia
+                                                    </td>
+                                                    <td>
+                                                        amaro@amaro.es
+                                                    </td>
+                                                    <td class="txt-align-center">
+                                                        <a class="botonDash personal" name="personal" value="12345673G">
+                                                            Datos personales
+                                                        </a>
+                                                    </td>
+                                                    <td class="txt-align-center">
+                                                        <a class="botonDash nominas" name="nominas" value="12345673G">
+                                                            Nóminas
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        12
+                                                    </td>
+                                                    <td>
+                                                        12345673D
+                                                    </td>
+                                                    <td>
+                                                        Carlos
+                                                    </td>
+                                                    <td>
+                                                        carlos@gradhermetic.es
+                                                    </td>
+                                                    <td class="txt-align-center">
+                                                        <a class="botonDash personal" name="personal" value="12345673D">
+                                                            Datos personales
+                                                        </a>
+                                                    </td>
+                                                    <td class="txt-align-center">
+                                                        <a class="botonDash nominas" name="nominas" value="12345673D">
+                                                            Nóminas
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        13
+                                                    </td>
+                                                    <td>
+                                                        12345673L
+                                                    </td>
+                                                    <td>
+                                                        Marcos Meridiano Domínguez
+                                                    </td>
+                                                    <td>
+                                                        marcosdom@gradhermetic.com
+                                                    </td>
+                                                    <td class="txt-align-center">
+                                                        <a class="botonDash personal" name="personal" value="12345673L">
+                                                            Datos personales
+                                                        </a>
+                                                    </td>
+                                                    <td class="txt-align-center">
+                                                        <a class="botonDash nominas" name="nominas" value="12345673L">
+                                                            Nóminas
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <div>
+                                                <a href="dashboard.php?rend=trabajadores/trabajadores.php&PAGE=1">
+                                                    1
+                                                </a>
+                                            </div>
+                                            <!--Botones al final de la tabla -->
+                                            <div class="btn-group padding-top30">
+                                                <a class="botonDash" href="dashboard.php?rend=trabajadores/trabajadores.php&acciones_trabajadores=todos">
+                                                    Mostrar todos
+                                                </a>
+                                                <a class="botonDash" href="dashboard.php?rend=trabajadores/trabajadores.php&acciones_trabajadores=contratar">
+                                                    Contratar trabajador
+                                                </a>
+                                            </div>
+                                            <!--Fin del div con el id, body-cuadrado cuadrado, fila de la clase-->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+<script>
+    var modal = document.getElementById('form-modal');
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+</script>
